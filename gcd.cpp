@@ -39,7 +39,7 @@ int gcd(int a, int b)
 // Driver program to test above function
 int main()
 {
-    int a = 30, b = 24;
+    int a = 30, b = 24, t=15;
     cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
     return 0;
 }
