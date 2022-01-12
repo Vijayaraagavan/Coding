@@ -15,7 +15,7 @@
     <p id = "main"></p></div>
     <script>
         function loadDoc(){
-        var parser,xmldoc,i;
+        var parser,xmldoc,i,len;
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(this.readyState==4 && this.status==200){
@@ -23,8 +23,8 @@
                 var str = xhr.responseText;
                 parser = new DOMParser();
                 xmldoc = parser.parseFromString(str,'text/xml');
-                for(i=0;i<2;i++){
-                    console.log(i);
+                 len = xmldoc.getElementsByTagName("topic");
+                for(i=0;i<len.length;i++){
                 document.getElementById("main").innerHTML += "TOPIC: "+xmldoc.getElementsByTagName("topic")[i].childNodes[0].nodeValue+"<br>";
                 document.getElementById("main").innerHTML += "Headline: "+xmldoc.getElementsByTagName("head")[i].childNodes[0].nodeValue+"<br>";
                 document.getElementById("main").innerHTML += "reported at: "+xmldoc.getElementsByTagName("time")[i].childNodes[0].nodeValue+"<br>";
