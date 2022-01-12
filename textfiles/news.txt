@@ -12,4 +12,11 @@
         <time>15h ago</time>
         <source>XDA Developers</source>
     </news>
+    
+    <news>
+        <topic>Tech</topic>
+        <head>Mircosoft releases Windows 11 build 22000.434 - here's what's new</head>
+        <time>15h ago</time>
+        <source>XDA Developers</source>
+    </news>
 </newsletter>
