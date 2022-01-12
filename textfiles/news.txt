@@ -1,0 +1,15 @@
+<newsletter>
+    <news>
+        <topic>Gaming</topic>
+        <head>PUBG new state UPdate 0.9.23 with new game mode announced</head>
+        <time>22h ago</time>
+        <source>NDTV</source>
+    </news>
+
+    <news>
+        <topic>Tech</topic>
+        <head>Mircosoft releases Windows 11 build 22000.434 - here's what's new</head>
+        <time>15h ago</time>
+        <source>XDA Developers</source>
+    </news>
+</newsletter>
