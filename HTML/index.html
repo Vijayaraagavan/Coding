@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+       <p>Click here to see latest news: </p>
+       <button onclick="loadDoc()">Open</button> 
+    <p id="root"></p>
+    <br />
+    <p id = "main"></p></div>
+    <script>
+        function loadDoc(){
+        var parser,xmldoc,i;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(this.readyState==4 && this.status==200){
+                console.log(xhr.responseText);
+                var str = xhr.responseText;
+                parser = new DOMParser();
+                xmldoc = parser.parseFromString(str,'text/xml');
+                for(i=0;i<2;i++){
+                    console.log(i);
+                document.getElementById("main").innerHTML += "TOPIC: "+xmldoc.getElementsByTagName("topic")[i].childNodes[0].nodeValue+"<br>";
+                document.getElementById("main").innerHTML += "Headline: "+xmldoc.getElementsByTagName("head")[i].childNodes[0].nodeValue+"<br>";
+                document.getElementById("main").innerHTML += "reported at: "+xmldoc.getElementsByTagName("time")[i].childNodes[0].nodeValue+"<br>";
+                document.getElementById("main").innerHTML += "Sources are: "+xmldoc.getElementsByTagName("source")[i].childNodes[0].nodeValue+"<br><br>";
+            }
+        }
+        };
+        xhr.open("GET",'../textfiles/news.txt',true);
+        xhr.send();
+    }
+    </script>
+</body>
+</html>
