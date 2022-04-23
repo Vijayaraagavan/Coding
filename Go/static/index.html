@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Welcome paradise</title>
+    <style>
+        div.main{
+            background-color: azure;
+            font-size: 20px;
+            width: 85%;
+            border: 10px solid burlywood;
+            border-radius: 20px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            height: 90vh;
+            text-align: center;
+        }
+        .navig{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item{
+            display: inline-block;
+            /* flex: 1; */
+        }
+        a{
+            text-decoration: none;
+        }
+        .itemlist{
+            display: flex;
+            width: 100%;
+            /* gap: 10px; */
+            justify-content: space-evenly;
+            /* align-items: center; */
+        }
+        .container{
+            height: 80%;
+        }
+        img{
+            width: 80%;
+            height: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h3>Ardhika Software Technologies</h3>
+    <header>This is an Excellent website</header>
+    <hr />
+    <div class="navig">
+        <ul class="itemlist">
+            <li class="item"><a href="#" >Home</a></li>
+            <li class="item"><a href="#" >Form</a></li>
+            <li class="item"><a href="#" >About</a></li>
+            
+        </ul>
+    </div>
+    <div class="container">
+        <img src="./download.jpg" alt="pic">
+    </div>
+    </div>
+</body>
+</html>
